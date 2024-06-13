@@ -4,6 +4,11 @@
         "*.embeddedhtml": "html",
         "socket.h": "c",
         "poll.h": "c",
-        "unistd.h": "c"
+        "unistd.h": "c",
+        "stdio.h": "c",
+        "libhash.h": "c",
+        "stdlib.h": "c",
+        "raylib.h": "c",
+        "time.h": "c"
     }
 }
