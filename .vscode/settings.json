@@ -9,6 +9,14 @@
         "libhash.h": "c",
         "stdlib.h": "c",
         "raylib.h": "c",
-        "time.h": "c"
+        "time.h": "c",
+        "array": "c",
+        "string_view": "c",
+        "initializer_list": "c",
+        "utility": "c",
+        "system_error": "c",
+        "functional": "c",
+        "tuple": "c",
+        "type_traits": "c"
     }
 }
