@@ -31,7 +31,7 @@ void DrawPlayer(Player *p)
 
 void PrintPlayerCords(Player *p)
 {
-    printf("posX:(%f) posY:(%f)\n", p->pos.x, p->pos.y);
+    printf("Player posX:(%f) posY:(%f)\n", p->pos.x, p->pos.y);
 }
 
 void HandlePlayerControl(Player *p)
