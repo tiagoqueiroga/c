@@ -10,7 +10,7 @@ typedef struct Ball
     Vector2 pos;
     float width;
     float radius;
-    float velocity;
+    Vector2 velocity;
     Color color;
 } Ball;
 
@@ -18,6 +18,6 @@ Ball *CreateBall(float pos_x, float pos_y, float radius);
 void DestroyBall(Ball *Ball);
 void DrawBall(Ball *p);
 void PrintBallCords(Ball *p);
-void UpdateBall(Ball *p);
+void UpdateBall(Ball *b, Player *p);
 
 #endif

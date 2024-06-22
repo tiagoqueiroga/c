@@ -7,8 +7,17 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+#include "player.h"
+#include "ball.h"
+
 #define SCREEN_WIDTH 860
 #define SCREEN_HEIGHT 440
+#define SCREEN_WIDTH_CENTER (SCREEN_WIDTH / 2)
+#define SCREEN_HEIGHT_CENTER (SCREEN_HEIGHT / 2)
+
+#define FPS 60
+#define GAME_PAUSED_TEXT "Game Paused"
+#define GAME_PAUSED_FONT_SIZE 20
 
 #define GAME_TITLE "My shitty game"
 #define VELOCITY 10
@@ -20,15 +29,5 @@
 #define BALL_INIT_WIDTH 50
 #define BALL_INIT_RADIUS 50
 #define BALL_INIT_COLOR RED
-#define BALL_INIT_VELOCITY 1
-
-void SetSettings()
-{
-    SetTargetFPS(60);
-}
-
-void InitVars()
-{
-}
 
 #endif
