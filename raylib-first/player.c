@@ -36,16 +36,22 @@ void PrintPlayerCords(Player *p)
 
 void HandlePlayerControl(Player *p)
 {
-    if (IsKeyDown(KEY_RIGHT) || IsKeyDown(KEY_L))
-    {
-
-        if (p->pos.x < SCREEN_BOUND_X)
-            p->pos.x += GetFrameTime() + VELOCITY;
-    }
 
     if (IsKeyDown(KEY_LEFT) || IsKeyDown(KEY_H))
     {
         if (p->pos.x > 0)
             p->pos.x += GetFrameTime() - VELOCITY;
+
+        if (p->pos.x < 0)
+            p->pos.x = 0;
+    }
+
+    if (IsKeyDown(KEY_RIGHT) || IsKeyDown(KEY_L))
+    {
+        if (p->pos.x + GetFrameTime() - VELOCITY < SCREEN_WIDTH - p->width)
+            p->pos.x += GetFrameTime() + VELOCITY;
+
+        if (p->pos.x + GetFrameTime() - VELOCITY > SCREEN_WIDTH - p->width)
+            p->pos.x = SCREEN_WIDTH - p->width;
     }
 }

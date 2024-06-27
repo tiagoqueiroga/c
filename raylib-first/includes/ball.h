@@ -19,5 +19,7 @@ void DestroyBall(Ball *Ball);
 void DrawBall(Ball *p);
 void PrintBallCords(Ball *p);
 void UpdateBall(Ball *b, Player *p);
+bool CheckBallCollision(Ball *b, Player *p);
+void RespawnBall(Ball *b);
 
 #endif

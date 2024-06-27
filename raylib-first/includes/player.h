@@ -5,17 +5,11 @@
 #include <stdlib.h>
 #include "game.h"
 
-// Player
-#define PLAYER_INIT_WIDTH 100
-#define PLAYER_INIT_HEIGHT 20
-#define PLAYER_X_POSITION SCREEN_WIDTH / 2
-#define PLAYER_Y_POSITION 400
-
 typedef struct Player
 {
     Vector2 pos;
-    float width;
-    float height;
+    int width;
+    int height;
     Color color;
 } Player;
 

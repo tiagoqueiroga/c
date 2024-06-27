@@ -10,7 +10,7 @@ int main()
   Config config = InitConfig();
 
   // Player
-  Player *player = CreatePlayer(PLAYER_X_POSITION, PLAYER_Y_POSITION);
+  Player *player = CreatePlayer(PLAYER_INIT_POS_X, PLAYER_INIT_POS_Y);
 
   // Ball
   Ball *ball = CreateBall(100, 100, 10);
@@ -28,12 +28,12 @@ int main()
     // Update
     if (!GamePaused())
     {
-      UpdateBall(ball, player);
       HandlePlayerControl(player);
+      UpdateBall(ball, player);
     }
 
-    // PrintPlayerCords(player);
-    // PrintBallCords(ball);
+    PrintPlayerCords(player);
+    PrintBallCords(ball);
 
     // Draw
     BeginDrawing();
